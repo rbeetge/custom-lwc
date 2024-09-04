@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Related Contacts">
+        <lightning-button label="Refresh" onclick={handleRefresh} class="slds-m-bottom_small"></lightning-button>
+        <lightning-button label="Add Contact" onclick={handleAddContact}></lightning-button>
+        <lightning-datatable
+            key-field="Id"
+            data={contacts}
+            columns={columns}
+            hide-checkbox-column
+            onsave={handleSave}
+            draft-values={draftValues}>
+        </lightning-datatable>
+    </lightning-card>
+</template>
